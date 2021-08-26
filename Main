@@ -213,7 +213,7 @@ Reset.TextSize = 27.000
 --Button Function
 
 Reset.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	game.Players.LocalPlayer.Character:ClearAllChildren()
 end)
 
 UICorner_10.CornerRadius = UDim.new(0, 10)
