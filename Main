@@ -321,6 +321,12 @@ Delete.Text = "X"
 Delete.TextColor3 = Color3.fromRGB(0, 0, 0)
 Delete.TextSize = 36.000
 
+--Button function
+
+Delete.MouseButton1Down:connect(function()
+	PaxxousGui:Destroy()
+end)
+
 Website.Name = "Website"
 Website.Parent = main
 Website.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
