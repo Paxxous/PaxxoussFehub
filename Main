@@ -1,3 +1,21 @@
+
+local randomTip = {"Tip: use the netless bypass so your fe scripts parts don't fall off!", "Tip: The fe hat script has commands like .speed! or .orbit target", "Tip: Making a respawn script is hard so just use roblox's reset for now", "Announcment: I will be updating the GUI quite soon, so lookout for that :D"}
+
+local chosenVariable = randomTip[math.random(1, #randomTip)]
+
+local function notification()
+	game.StarterGui:SetCore("SendNotification", {
+
+		Title = "Paxxous Gui Loaded";
+		Text = chosenVariable;
+		Duration = "10";
+
+
+	})
+end
+
+
+
 local PaxxousGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -13,16 +31,32 @@ local NetlessBypass = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local HatOrbit = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
-local ComingSoon_2 = Instance.new("TextButton")
+local ComingSoon = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
-local Title = Instance.new("TextLabel")
+local ComingSoon_2 = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
+local ComingSoon_3 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local ComingSoon_4 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local ComingSoon_5 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local ComingSoon_6 = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local ComingSoon_7 = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local ComingSoon_8 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local ComingSoon_9 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local UICorner_17 = Instance.new("UICorner")
 local Delete = Instance.new("TextButton")
 local Website = Instance.new("TextLabel")
 local Reset = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 
-
+notification()
 
 PaxxousGui.Name = "PaxxousGui"
 PaxxousGui.Parent = game.CoreGui
@@ -31,10 +65,10 @@ PaxxousGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 main.Name = "main"
 main.Parent = PaxxousGui
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
-main.Position = UDim2.new(0.802135587, 0, 0.201227009, 0)
+main.Position = UDim2.new(0.808420956, 0, 0.209570274, 0)
 main.Size = UDim2.new(0, 290, 0, 486)
-main.Draggable = true
 main.Active = true
+main.Draggable = true
 
 UICorner.CornerRadius = UDim.new(0, 20)
 UICorner.Parent = main
@@ -134,7 +168,7 @@ HatOrbit.BorderSizePixel = 4
 HatOrbit.Position = UDim2.new(0.137999997, 0, 0.300000012, 0)
 HatOrbit.Size = UDim2.new(0, 200, 0, 50)
 HatOrbit.Font = Enum.Font.Arial
-HatOrbit.Text = "HatOrbit"
+HatOrbit.Text = "Hat Orbit"
 HatOrbit.TextColor3 = Color3.fromRGB(0, 0, 0)
 HatOrbit.TextSize = 14.000
 
@@ -146,18 +180,122 @@ end)
 
 UICorner_7.Parent = HatOrbit
 
+ComingSoon.Name = "ComingSoon"
+ComingSoon.Parent = Scripts
+ComingSoon.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+ComingSoon.BorderSizePixel = 4
+ComingSoon.Position = UDim2.new(0.137999997, 0, 0.370000005, 0)
+ComingSoon.Size = UDim2.new(0, 200, 0, 50)
+ComingSoon.Font = Enum.Font.Arial
+ComingSoon.Text = "Coming Soon!"
+ComingSoon.TextColor3 = Color3.fromRGB(0, 0, 0)
+ComingSoon.TextSize = 14.000
+
+UICorner_8.Parent = ComingSoon
+
 ComingSoon_2.Name = "ComingSoon"
 ComingSoon_2.Parent = Scripts
 ComingSoon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
 ComingSoon_2.BorderSizePixel = 4
-ComingSoon_2.Position = UDim2.new(0.137999997, 0, 0.370000005, 0)
+ComingSoon_2.Position = UDim2.new(0.137999997, 0, 0.439999998, 0)
 ComingSoon_2.Size = UDim2.new(0, 200, 0, 50)
 ComingSoon_2.Font = Enum.Font.Arial
 ComingSoon_2.Text = "Coming Soon!"
 ComingSoon_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 ComingSoon_2.TextSize = 14.000
 
-UICorner_8.Parent = ComingSoon_2
+UICorner_9.Parent = ComingSoon_2
+
+ComingSoon_3.Name = "ComingSoon"
+ComingSoon_3.Parent = Scripts
+ComingSoon_3.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+ComingSoon_3.BorderSizePixel = 4
+ComingSoon_3.Position = UDim2.new(0.137999997, 0, 0.50999999, 0)
+ComingSoon_3.Size = UDim2.new(0, 200, 0, 50)
+ComingSoon_3.Font = Enum.Font.Arial
+ComingSoon_3.Text = "Coming Soon!"
+ComingSoon_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+ComingSoon_3.TextSize = 14.000
+
+UICorner_10.Parent = ComingSoon_3
+
+ComingSoon_4.Name = "ComingSoon"
+ComingSoon_4.Parent = Scripts
+ComingSoon_4.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+ComingSoon_4.BorderSizePixel = 4
+ComingSoon_4.Position = UDim2.new(0.137999997, 0, 0.579999983, 0)
+ComingSoon_4.Size = UDim2.new(0, 200, 0, 50)
+ComingSoon_4.Font = Enum.Font.Arial
+ComingSoon_4.Text = "Coming Soon!"
+ComingSoon_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+ComingSoon_4.TextSize = 14.000
+
+UICorner_11.Parent = ComingSoon_4
+
+ComingSoon_5.Name = "ComingSoon"
+ComingSoon_5.Parent = Scripts
+ComingSoon_5.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+ComingSoon_5.BorderSizePixel = 4
+ComingSoon_5.Position = UDim2.new(0.137999997, 0, 0.649999976, 0)
+ComingSoon_5.Size = UDim2.new(0, 200, 0, 50)
+ComingSoon_5.Font = Enum.Font.Arial
+ComingSoon_5.Text = "Coming Soon!"
+ComingSoon_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+ComingSoon_5.TextSize = 14.000
+
+UICorner_12.Parent = ComingSoon_5
+
+ComingSoon_6.Name = "ComingSoon"
+ComingSoon_6.Parent = Scripts
+ComingSoon_6.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+ComingSoon_6.BorderSizePixel = 4
+ComingSoon_6.Position = UDim2.new(0.137999997, 0, 0.720000029, 0)
+ComingSoon_6.Size = UDim2.new(0, 200, 0, 50)
+ComingSoon_6.Font = Enum.Font.Arial
+ComingSoon_6.Text = "Coming Soon!"
+ComingSoon_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+ComingSoon_6.TextSize = 14.000
+
+UICorner_13.Parent = ComingSoon_6
+
+ComingSoon_7.Name = "ComingSoon"
+ComingSoon_7.Parent = Scripts
+ComingSoon_7.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+ComingSoon_7.BorderSizePixel = 4
+ComingSoon_7.Position = UDim2.new(0.137999997, 0, 0.790000021, 0)
+ComingSoon_7.Size = UDim2.new(0, 200, 0, 50)
+ComingSoon_7.Font = Enum.Font.Arial
+ComingSoon_7.Text = "Coming Soon!"
+ComingSoon_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+ComingSoon_7.TextSize = 14.000
+
+UICorner_14.Parent = ComingSoon_7
+
+ComingSoon_8.Name = "ComingSoon"
+ComingSoon_8.Parent = Scripts
+ComingSoon_8.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+ComingSoon_8.BorderSizePixel = 4
+ComingSoon_8.Position = UDim2.new(0.137999997, 0, 0.860000014, 0)
+ComingSoon_8.Size = UDim2.new(0, 200, 0, 50)
+ComingSoon_8.Font = Enum.Font.Arial
+ComingSoon_8.Text = "Coming Soon!"
+ComingSoon_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+ComingSoon_8.TextSize = 14.000
+
+UICorner_15.Parent = ComingSoon_8
+
+ComingSoon_9.Name = "ComingSoon"
+ComingSoon_9.Parent = Scripts
+ComingSoon_9.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+ComingSoon_9.BorderSizePixel = 4
+ComingSoon_9.Position = UDim2.new(0.137999997, 0, 0.930000007, 0)
+ComingSoon_9.Size = UDim2.new(0, 200, 0, 50)
+ComingSoon_9.Font = Enum.Font.Arial
+ComingSoon_9.Text = "Coming Soon!"
+ComingSoon_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+ComingSoon_9.TextSize = 14.000
+
+UICorner_16.Parent = ComingSoon_9
 
 Title.Name = "Title"
 Title.Parent = main
@@ -170,7 +308,7 @@ Title.Text = "Paxxous's Fe Gui"
 Title.TextColor3 = Color3.fromRGB(0, 0, 0)
 Title.TextSize = 25.000
 
-UICorner_9.Parent = Title
+UICorner_17.Parent = Title
 
 Delete.Name = "Delete"
 Delete.Parent = main
@@ -182,12 +320,6 @@ Delete.Font = Enum.Font.SourceSans
 Delete.Text = "X"
 Delete.TextColor3 = Color3.fromRGB(0, 0, 0)
 Delete.TextSize = 36.000
-
---Button function
-
-Delete.MouseButton1Down:connect(function()
-	PaxxousGui:Destroy()
-end)
 
 Website.Name = "Website"
 Website.Parent = main
@@ -210,11 +342,5 @@ Reset.Text = "Reset"
 Reset.TextColor3 = Color3.fromRGB(0, 0, 0)
 Reset.TextSize = 27.000
 
---Button Function
-
-Reset.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character:ClearAllChildren()
-end)
-
-UICorner_10.CornerRadius = UDim.new(0, 10)
-UICorner_10.Parent = Reset
+UICorner_18.CornerRadius = UDim.new(0, 10)
+UICorner_18.Parent = Reset
