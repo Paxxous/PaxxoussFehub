@@ -1,5 +1,14 @@
 
-local randomTip = {"Tip: use the netless bypass so your fe scripts parts don't fall off!", "Tip: The fe hat script has commands like .speed! or .orbit target", "Tip: Making a respawn script is hard so just use roblox's reset for now", "Announcment: I will be updating the GUI quite soon, so lookout for that :D"}
+
+
+if _G.isLoaded == true then
+    print("The gui is already loaded!")
+    PaxxousGui:Destroy()
+end
+
+
+
+local randomTip = {"Tip: use the netless bypass so your fe scripts parts don't fall off!", "Tip: The fe hat script has commands like .speed! or .orbit target", "Tip: Making a respawn script is hard so just use roblox's reset for now", "The spider script may be buggy so you may not reset properly. (use infinite yeilds rejoin for a garentee rejoin of the server)"}
 
 local chosenVariable = randomTip[math.random(1, #randomTip)]
 
@@ -31,7 +40,7 @@ local NetlessBypass = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local HatOrbit = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
-local ComingSoon = Instance.new("TextButton")
+local Spider = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local ComingSoon_2 = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
@@ -47,7 +56,7 @@ local ComingSoon_7 = Instance.new("TextButton")
 local UICorner_14 = Instance.new("UICorner")
 local ComingSoon_8 = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
-local ComingSoon_9 = Instance.new("TextButton")
+local Brag = Instance.new("TextButton")
 local UICorner_16 = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
 local UICorner_17 = Instance.new("UICorner")
@@ -180,18 +189,22 @@ end)
 
 UICorner_7.Parent = HatOrbit
 
-ComingSoon.Name = "ComingSoon"
-ComingSoon.Parent = Scripts
-ComingSoon.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
-ComingSoon.BorderSizePixel = 4
-ComingSoon.Position = UDim2.new(0.137999997, 0, 0.370000005, 0)
-ComingSoon.Size = UDim2.new(0, 200, 0, 50)
-ComingSoon.Font = Enum.Font.Arial
-ComingSoon.Text = "Coming Soon!"
-ComingSoon.TextColor3 = Color3.fromRGB(0, 0, 0)
-ComingSoon.TextSize = 14.000
+Spider.Name = "Spider"
+Spider.Parent = Scripts
+Spider.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+Spider.BorderSizePixel = 4
+Spider.Position = UDim2.new(0.137999997, 0, 0.370000005, 0)
+Spider.Size = UDim2.new(0, 200, 0, 50)
+Spider.Font = Enum.Font.Arial
+Spider.Text = "Spider"
+Spider.TextColor3 = Color3.fromRGB(0, 0, 0)
+Spider.TextSize = 14.000
 
-UICorner_8.Parent = ComingSoon
+Spider.MouseButton1Down:connect(function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/txsk1LJg'))()
+end)
+
+UICorner_8.Parent = Spider
 
 ComingSoon_2.Name = "ComingSoon"
 ComingSoon_2.Parent = Scripts
@@ -284,18 +297,49 @@ ComingSoon_8.TextSize = 14.000
 
 UICorner_15.Parent = ComingSoon_8
 
-ComingSoon_9.Name = "ComingSoon"
-ComingSoon_9.Parent = Scripts
-ComingSoon_9.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
-ComingSoon_9.BorderSizePixel = 4
-ComingSoon_9.Position = UDim2.new(0.137999997, 0, 0.930000007, 0)
-ComingSoon_9.Size = UDim2.new(0, 200, 0, 50)
-ComingSoon_9.Font = Enum.Font.Arial
-ComingSoon_9.Text = "Coming Soon!"
-ComingSoon_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-ComingSoon_9.TextSize = 14.000
+Brag.Name = "Brag"
+Brag.Parent = Scripts
+Brag.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+Brag.BorderSizePixel = 4
+Brag.Position = UDim2.new(0.137999997, 0, 0.930000007, 0)
+Brag.Size = UDim2.new(0, 200, 0, 50)
+Brag.Font = Enum.Font.Arial
+Brag.Text = "Brags about Gui"
+Brag.TextColor3 = Color3.fromRGB(0, 0, 0)
+Brag.TextSize = 14.000
 
-UICorner_16.Parent = ComingSoon_9
+Brag.MouseButton1Down:connect(function()
+	
+		local args = {
+		[1] = "Paxxous Gui on top!",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	
+	wait(1)
+	
+
+	
+		local args = {
+		[1] = "Only the best use the Paxxous Gui, Subscribe!",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	
+	wait(1)
+	
+		local args = {
+		[1] = "Paxxous.xyz!",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	
+end)
+
+UICorner_16.Parent = Brag
 
 Title.Name = "Title"
 Title.Parent = main
@@ -325,6 +369,7 @@ Delete.TextSize = 36.000
 
 Delete.MouseButton1Down:connect(function()
 	PaxxousGui:Destroy()
+	_G.isLoaded = false
 end)
 
 Website.Name = "Website"
@@ -350,3 +395,5 @@ Reset.TextSize = 27.000
 
 UICorner_18.CornerRadius = UDim.new(0, 10)
 UICorner_18.Parent = Reset
+
+_G.isLoaded = true
