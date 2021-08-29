@@ -5,7 +5,7 @@ if _G.isLoaded == true then
     
     Title = "The Gui is already loaded!";
     Text = "if you don't have the gui, make sure to rejoin";
-    Duration = "7";
+    Duration = "10";
     
     })
     
@@ -23,7 +23,7 @@ local function notification()
 
 		Title = "Paxxous Gui Loaded";
 		Text = chosenVariable;
-		Duration = "10";
+		Duration = "15";
 
 
 	})
