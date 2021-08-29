@@ -5,7 +5,7 @@ if _G.isLoaded == true then
     
     Title = "The Gui is already loaded!";
     Text = "if you don't have the gui, make sure to rejoin";
-    Duration = "10";
+    Duration = "7";
     
     })
     
@@ -23,7 +23,7 @@ local function notification()
 
 		Title = "Paxxous Gui Loaded";
 		Text = chosenVariable;
-		Duration = "15";
+		Duration = "10";
 
 
 	})
@@ -70,6 +70,7 @@ local Delete = Instance.new("TextButton")
 local Website = Instance.new("TextLabel")
 local Reset = Instance.new("TextButton")
 local UICorner_18 = Instance.new("UICorner")
+local minimize = Instance.new("TextButton")
 
 notification()
 
@@ -403,3 +404,23 @@ UICorner_18.CornerRadius = UDim.new(0, 10)
 UICorner_18.Parent = Reset
 
 _G.isLoaded = true
+
+minimize.Name = "minimize"
+minimize.Parent = main
+minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 170)
+minimize.BorderColor3 = Color3.fromRGB(130, 203, 255)
+minimize.BorderSizePixel = 0
+minimize.Position = UDim2.new(0.0448275879, 0, 0.0452674925, 0)
+minimize.Size = UDim2.new(0, 31, 0, 20)
+minimize.Font = Enum.Font.Ubuntu
+minimize.Text = "-"
+minimize.TextColor3 = Color3.fromRGB(0, 0, 0)
+minimize.TextSize = 46.000
+
+--Button function
+
+minimize.MouseButton1Down:connect(function()
+	_G.isLoaded = false
+	PaxxousGui:Destroy()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Paxxous/PaxxoussFehub/main/minimized'),true))()
+end)
