@@ -1,8 +1,14 @@
-
-
-
 if _G.isLoaded == true then
     print("The gui is already loaded!")
+    
+    game.StarterGui:SetCore("SendNotification", {
+    
+    Title = "The Gui is already loaded!";
+    Text = "if you don't have the gui, make sure to rejoin";
+    Duration = "7";
+    
+    })
+    
     PaxxousGui:Destroy()
 end
 
