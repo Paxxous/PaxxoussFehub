@@ -1,4 +1,4 @@
-if _G.isLoaded == true then
+if getgenv().isLoaded == true then
     print("The gui is already loaded!")
     
     game.StarterGui:SetCore("SendNotification", {
@@ -376,7 +376,7 @@ Delete.TextSize = 36.000
 
 Delete.MouseButton1Down:connect(function()
 	PaxxousGui:Destroy()
-	_G.isLoaded = false
+	getgenv().isLoaded = false
 end)
 
 Website.Name = "Website"
@@ -403,7 +403,7 @@ Reset.TextSize = 27.000
 UICorner_18.CornerRadius = UDim.new(0, 10)
 UICorner_18.Parent = Reset
 
-_G.isLoaded = true
+getgenv().isLoaded = true
 
 minimize.Name = "minimize"
 minimize.Parent = main
@@ -420,7 +420,7 @@ minimize.TextSize = 46.000
 --Button function
 
 minimize.MouseButton1Down:connect(function()
-	_G.isLoaded = false
+	getgenv().isLoaded = false
 	PaxxousGui:Destroy()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Paxxous/PaxxoussFehub/main/minimized'),true))()
 end)
