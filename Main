@@ -1,3 +1,8 @@
+if game.PlaceId == 2245022872 then
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Paxxous/loadstrings/main/DemolitionCreGui'),true))()
+    print("Game detected, Demolition Crew")
+end
+
 if getgenv().isLoaded == true then
     print("The gui is already loaded!")
     
