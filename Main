@@ -1,7 +1,23 @@
+
+
 if game.PlaceId == 2245022872 then
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Paxxous/loadstrings/main/DemolitionCreGui'),true))()
-    print("Game detected, Demolition Crew")
+    if getgenv().gameui == true then
+        getgenv().gameui = false
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Paxxous/loadstrings/main/DemolitionCreGui'),true))()
+        print("Game detected, Demolition Crew")
+    end
+    
 end
+
+
+if game.PlaceId == 6961824067 then
+    if getgenv().gameui == true then
+        getgenv().gameui = false
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Paxxous/loadstrings/main/flingpeoplrandstuf'),true))()
+        print("Game detected, Fling Things and People")
+    end
+end
+
 
 if getgenv().isLoaded == true then
     print("The gui is already loaded!")
