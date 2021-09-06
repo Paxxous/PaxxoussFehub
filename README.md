@@ -12,3 +12,5 @@ Supported games:
 
 
 Demolition Crew: https://www.roblox.com/games/2245022872/Demolition-Crew-V1-5-4
+
+Fling Things and People https://www.roblox.com/games/6961824067/Fling-Things-and-People
