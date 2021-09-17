@@ -1,5 +1,3 @@
-print("now obfuscated :D)
-
 if game.PlaceId == 2245022872 then
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/Paxxous/loadstrings/main/DemolitionCreGui'),true))()
     print("Game detected, Demolition Crew")
