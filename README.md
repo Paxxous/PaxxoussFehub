@@ -5,7 +5,7 @@ This fe hub is just a catalog to test how I am at lua, and to make things neater
 
 Loadstring: 
 
-```
+```lua
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Paxxous/PaxxoussFehub/main/Main'),true))()
 ```
 
